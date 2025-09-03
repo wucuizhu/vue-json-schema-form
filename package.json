@@ -1,9 +1,11 @@
 {
   "name": "vue-json-schema-form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/json-form.umd.js",
   "module": "dist/json-form.es.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,4 +16,3 @@
     "element-plus": "^2.0.0"
   }
 }
-
