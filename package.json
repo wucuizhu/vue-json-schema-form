@@ -1,6 +1,6 @@
 {
   "name": "wucuizhu-json-schema-form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/json-form.umd.js",
   "module": "dist/json-form.mjs",
   "files": [
