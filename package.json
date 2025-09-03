@@ -1,0 +1,17 @@
+{
+  "name": "vue-json-schema-form",
+  "version": "0.0.1",
+  "main": "dist/json-form.umd.js",
+  "module": "dist/json-form.es.js",
+  "files": ["dist"],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext .js,.vue"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "element-plus": "^2.0.0"
+  }
+}
+
