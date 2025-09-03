@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { terser } from 'rollup-plugin-terser'
 
 export default defineConfig({
   plugins: [vue()],
@@ -8,7 +7,12 @@ export default defineConfig({
     lib: {
       entry: 'src/index.js',
       name: 'JsonForm',
-      fileName: 'json-form'
+      fileName: (format) => {
+        if (format === 'es') return 'json-form.es.js'
+        if (format === 'umd') return 'json-form.umd.js'
+        return `json-form.${format}.js`
+      },
+      formats: ['es', 'umd']
     },
     rollupOptions: {
       external: ['vue', 'element-plus'],
@@ -16,8 +20,7 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
           'element-plus': 'ElementPlus'
-        },
-        plugins: [terser()]
+        }
       }
     }
   }
